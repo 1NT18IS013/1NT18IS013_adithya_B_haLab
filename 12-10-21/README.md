@@ -1,4 +1,4 @@
-## Demonstration Of Appklication Activity Lifecycle
+## Demonstration Of Application Activity Lifecycle
 
 - On Launch : `Create -> Start`
 - On Exiting app(waits in temp memory) : `Pause -> Stop`
