@@ -1,2 +1,5 @@
-# 1nt18is013_adithya_B_haLab
-a repo to document all work done in Hybrid Application Lab
+# Hybrid Application Development Lab
+
+NAME : Adithya Mallya
+USN : 1NT18IS013
+Batch : B1
