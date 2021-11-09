@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="725dp"
+        android:gravity="right|center"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="0"
+        android:textSize="40pt" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/btAC" android:onClick="acEvent" android:text="AC" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btSign" android:onClick="numberEvent" android:text="+/-" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btPer" android:onClick="percentEvent" android:text="%" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btMul" android:onClick="operatorEvent" android:text="*" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_700">
+            </Button>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/bt7" android:onClick="numberEvent" android:text="7" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/bt8" android:onClick="numberEvent" android:text="8" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/bt9" android:onClick="numberEvent" android:text="9" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btDiv" android:onClick="operatorEvent" android:text="/" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_700">
+            </Button>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/bt4" android:onClick="numberEvent" android:text="4" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/bt5" android:onClick="numberEvent" android:text="5" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/bt6" android:onClick="numberEvent" android:text="6" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btAdd" android:onClick="operatorEvent" android:text="+" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_700">
+            </Button>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/bt1" android:onClick="numberEvent" android:text="1" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/bt2" android:onClick="numberEvent" android:text="2" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/bt3" android:onClick="numberEvent" android:text="3" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btSub" android:onClick="operatorEvent" android:text="-" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="30pt" android:layout_weight="1" android:backgroundTint="@color/teal_700">
+            </Button>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/bt0" android:onClick="numberEvent" android:text="0" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="46pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btDot" android:onClick="numberEvent" android:text="." android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="46pt" android:layout_weight="1" android:backgroundTint="@color/teal_200">
+            </Button>
+            <Button android:id="@+id/btEqu" android:onClick="equalEvent" android:text="=" android:layout_marginRight="1pt" android:layout_height="30pt" android:layout_width="46pt" android:layout_weight="1" android:backgroundTint="@color/teal_700">
+            </Button>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
