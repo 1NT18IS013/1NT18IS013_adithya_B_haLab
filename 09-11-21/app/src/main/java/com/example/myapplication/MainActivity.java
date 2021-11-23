@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         call = findViewById(R.id.btCall);
         save = findViewById(R.id.btSave);
 
-        //check if permission to call(in Settings) is set; if not ASK for the permission
+        //check if permission to call is set(in Settings); if not ASK for the permission
         if (checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(getApplicationContext(), "Call permission granted", Toast.LENGTH_SHORT).show();
         } else {
