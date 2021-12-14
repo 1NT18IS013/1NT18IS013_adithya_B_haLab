@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My List</string>
+    <string-array name="players">
+        <item>Lionel Messi</item>
+        <item>Robert Lewandowski</item>
+        <item>Jorginho</item>
+        <item>Karim Benzema</item>
+        <item>N'Golo Kante</item>
+    </string-array>
+</resources>
