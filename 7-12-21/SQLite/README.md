@@ -2,13 +2,29 @@
 
 - Design a form to accept entries to store in a dB
 - Create DataHelper class
-- Insert data into dB on form submission.
+- Perform CRUD operations on the dB.
 
-### Application 
+### CRUD operations 
 
-![screenshot](sqlite.png)
+#### 1. Insert data
 
-### Database
+![screenshot](shots/insert.png)
 
-![screenshot](db.png)
+> Order.db
+
+![screenshot](shots/db1.png)
+
+#### 2. Update data
+
+![screenshot](shots/update.png)
+
+> Order.db
+
+![screenshot](shots/db2.png)
+
+#### 3. Delete record and view data
+
+> Order.db
+
+![screenshot](shots/view.png)
 

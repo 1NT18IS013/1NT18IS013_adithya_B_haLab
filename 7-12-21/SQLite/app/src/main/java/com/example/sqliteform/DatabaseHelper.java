@@ -1,5 +1,6 @@
 package com.example.sqliteform;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
@@ -16,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String CREATE_TABLE="create table if not exists "+ TABLE_NAME + "(" + COL1 + " INTEGER PRIMARY KEY AUTOINCREMENT,"+COL2+" TEXT NOT NULL," + COL3 + " TEXT NOT NULL, " +COL4 + " TEXT NOT NULL);";
     private static final String DROP_TABLE = "DROP TABLE IF EXISTS "+ TABLE_NAME;
-
+    private static final String SELECT_QUERY ="select * from "+ TABLE_NAME+ " where "+ COL2 +" = ?";
     private Context context;
     public DatabaseHelper(Context context) {
         super(context,dbName,null,version);
@@ -49,5 +50,46 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return  false;
         else
             return true;
+    }
+
+    public boolean UpdateOrder(Order objOrd){
+        SQLiteDatabase dbn = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COL3,objOrd.getUserOrder());
+        cv.put(COL4,objOrd.getUserAdd());
+        Cursor cursor = dbn.rawQuery(SELECT_QUERY, new String[] {objOrd.getUserPhNo()});
+
+        if(cursor.getCount() > 0){
+            long result = dbn.update(TABLE_NAME, cv, COL2+"=?", new String[] {objOrd.getUserPhNo()});
+            if(result == -1)
+                return false;
+            else
+                return true;
+        }else  {
+            return false;
+        }
+    }
+
+    public boolean DeleteOrder(Order objOrd){
+        SQLiteDatabase dbn = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        Cursor cursor = dbn.rawQuery(SELECT_QUERY, new String[] {objOrd.getUserPhNo()});
+        if(cursor.getCount() > 0){
+            long result = dbn.delete(TABLE_NAME, COL2+"=?", new String[] {objOrd.getUserPhNo()});
+            if(result == -1)
+                return false;
+            else
+                return true;
+        }else  {
+            return false;
+        }
+    }
+
+    public Cursor viewData(){
+        SQLiteDatabase dbn = this.getWritableDatabase();
+        Cursor cursor = dbn.rawQuery("Select * from "+TABLE_NAME, null);
+        return cursor;
     }
 }
