@@ -22,9 +22,13 @@
 
 ![screenshot](shots/db2.png)
 
-#### 3. Delete record and view data
+#### 3. After Delete
 
 > Order.db
+
+![screenshot](shots/deleted.png)
+
+#### 3. View all
 
 ![screenshot](shots/view.png)
 
